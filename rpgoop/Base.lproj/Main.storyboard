@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,12 +17,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Uuf-eG-OJE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="aol-uk-p3G">
+                                <rect key="frame" x="0.0" y="517" width="390" height="83"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="390" id="cH0-dK-bOk"/>
+                                    <constraint firstAttribute="height" constant="83" id="ole-hp-cIF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="yYb-vj-Uet">
+                                <rect key="frame" x="376" y="517" width="390" height="83"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="390" id="a5M-8U-pYP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="83" id="bBF-0m-qaX"/>
+                                    <constraint firstAttribute="width" constant="390" id="hdU-tM-b8C"/>
+                                    <constraint firstAttribute="height" constant="83" id="j7f-PI-Skg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uuf-eG-OJE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2QF-EQ-yz2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uuf-eG-OJE" secondAttribute="bottom" id="2di-HB-ws1"/>
+                            <constraint firstItem="Uuf-eG-OJE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6oF-uD-HWI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yYb-vj-Uet" secondAttribute="bottom" id="CEn-7h-mKQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aol-uk-p3G" secondAttribute="bottom" id="ZmD-Jb-uAE"/>
+                            <constraint firstAttribute="trailing" secondItem="Uuf-eG-OJE" secondAttribute="trailing" id="i9L-F4-oG7"/>
+                            <constraint firstItem="yYb-vj-Uet" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="356" id="ugt-hC-X4V"/>
+                            <constraint firstItem="aol-uk-p3G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wuu-Kj-v5s"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="303"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="768" height="1024"/>
+        <image name="ground" width="768" height="164"/>
+    </resources>
 </document>
