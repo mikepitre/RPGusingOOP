@@ -13,6 +13,8 @@
 		8FF4679A1BD96A48002ECE59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF467991BD96A48002ECE59 /* Assets.xcassets */; };
 		8FF4679D1BD96A48002ECE59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF4679B1BD96A48002ECE59 /* LaunchScreen.storyboard */; };
 		8FF467A51BD9746A002ECE59 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF467A41BD9746A002ECE59 /* Character.swift */; };
+		8FF467A71BD97806002ECE59 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF467A61BD97806002ECE59 /* Player.swift */; };
+		8FF467A91BD97C94002ECE59 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF467A81BD97C94002ECE59 /* Enemy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8FF4679C1BD96A48002ECE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FF4679E1BD96A48002ECE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FF467A41BD9746A002ECE59 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		8FF467A61BD97806002ECE59 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		8FF467A81BD97C94002ECE59 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				8FF4679B1BD96A48002ECE59 /* LaunchScreen.storyboard */,
 				8FF4679E1BD96A48002ECE59 /* Info.plist */,
 				8FF467A41BD9746A002ECE59 /* Character.swift */,
+				8FF467A61BD97806002ECE59 /* Player.swift */,
+				8FF467A81BD97C94002ECE59 /* Enemy.swift */,
 			);
 			path = rpgoop;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FF467A71BD97806002ECE59 /* Player.swift in Sources */,
+				8FF467A91BD97C94002ECE59 /* Enemy.swift in Sources */,
 				8FF467A51BD9746A002ECE59 /* Character.swift in Sources */,
 				8FF467951BD96A48002ECE59 /* ViewController.swift in Sources */,
 				8FF467931BD96A48002ECE59 /* AppDelegate.swift in Sources */,
