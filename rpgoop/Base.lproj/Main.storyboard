@@ -64,7 +64,7 @@
                                     <constraint firstAttribute="height" constant="195" id="shC-ba-57u"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player attacked wild Kimara!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGN-VE-dy0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the attack button to attack!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGN-VE-dy0">
                                 <rect key="frame" x="103" y="57" width="395" height="21"/>
                                 <animations/>
                                 <constraints>
@@ -87,7 +87,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gn-Og-1Uo">
-                                <rect key="frame" x="369.5" y="376" width="57.5" height="20.5"/>
+                                <rect key="frame" x="369" y="376" width="57.5" height="20.5"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57.5" id="SBD-XV-zmg"/>
@@ -105,6 +105,21 @@
                                     <constraint firstAttribute="width" constant="151" id="ZCb-TQ-nAp"/>
                                 </constraints>
                                 <state key="normal" image="chest"/>
+                                <connections>
+                                    <action selector="onChestPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdd-ve-9br"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIA-9W-c04">
+                                <rect key="frame" x="490" y="476" width="97" height="109"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="NBQ-dQ-FIQ"/>
+                                    <constraint firstAttribute="height" constant="109" id="lac-cy-D4B"/>
+                                </constraints>
+                                <state key="normal" image="attack"/>
+                                <connections>
+                                    <action selector="attackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Mr-ic-82Q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -121,6 +136,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9GA-nQ-4KM" secondAttribute="bottom" constant="67" id="TEQ-Qk-L0d"/>
                             <constraint firstItem="Y7z-DV-Rfc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="14" id="UXq-A1-fDp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aol-uk-p3G" secondAttribute="bottom" id="ZmD-Jb-uAE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OIA-9W-c04" secondAttribute="bottom" constant="15" id="b3F-6K-bLU"/>
                             <constraint firstAttribute="trailing" secondItem="JrM-38-JDO" secondAttribute="trailing" constant="20" id="dQ0-df-iYy"/>
                             <constraint firstItem="yYb-vj-Uet" firstAttribute="top" secondItem="8gn-Og-1Uo" secondAttribute="bottom" constant="120" id="hBt-cL-fF0"/>
                             <constraint firstItem="WGN-VE-dy0" firstAttribute="centerY" secondItem="YOY-V0-GLz" secondAttribute="centerY" id="hqC-Pp-2Ge"/>
@@ -132,9 +148,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="8gn-Og-1Uo" secondAttribute="trailing" constant="153" id="qM3-4K-PIm"/>
                             <constraint firstItem="yYb-vj-Uet" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="356" id="ugt-hC-X4V"/>
                             <constraint firstItem="aol-uk-p3G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wuu-Kj-v5s"/>
+                            <constraint firstAttribute="trailing" secondItem="OIA-9W-c04" secondAttribute="trailing" constant="13" id="xvV-AH-S9y"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="chestBtn" destination="JrM-38-JDO" id="s9q-eF-sMy"/>
                         <outlet property="enemyHpLbl" destination="8gn-Og-1Uo" id="shx-Of-AtI"/>
                         <outlet property="enemyImg" destination="9GA-nQ-4KM" id="fUZ-JA-9mz"/>
                         <outlet property="playerHpLbl" destination="jy9-0h-4zB" id="zFj-Nx-9cY"/>
@@ -147,6 +165,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="attack" width="198" height="223"/>
         <image name="bg" width="768" height="1024"/>
         <image name="chest" width="393" height="440"/>
         <image name="enem1" width="574" height="487"/>
